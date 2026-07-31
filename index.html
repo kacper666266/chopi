@@ -1,0 +1,1396 @@
+html_code = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHOPI | Hospitality Staffing Agency | Southampton & Hampshire</title>
+<meta name="description" content="CHOPI provides reliable hospitality staff for care homes, restaurants, hotels, schools and events across Southampton, Hampshire and the South Coast. Book chefs and hospitality staff today.">
+<meta name="keywords" content="hospitality staffing, chef agency, care home chefs, Southampton, Hampshire, relief chefs, kitchen staff, catering agency">
+<meta name="author" content="CHOPI">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="CHOPI | Hospitality Staffing Agency">
+<meta property="og:description" content="Reliable hospitality staff for care homes, restaurants, hotels and events across Southampton & Hampshire.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chopi.co.uk">
+<meta property="og:image" content="https://chopi.co.uk/og-image.jpg">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CHOPI | Hospitality Staffing Agency">
+<meta name="twitter:description" content="Reliable hospitality staff for care homes, restaurants, hotels and events across Southampton & Hampshire.">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍴%3C/text%3E%3C/svg%3E">
+
+<style>
+/* ============================================
+   CHOPI HOSPITALITY STAFFING
+   Single-file website | GitHub Pages ready
+   ============================================ */
+
+:root {
+  --navy: #0f172a;
+  --navy-light: #1e293b;
+  --gold: #d4a853;
+  --gold-light: #f0d99b;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --gray: #64748b;
+  --gray-light: #e2e8f0;
+  --green: #10b981;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--navy);
+  line-height: 1.6;
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+.btn-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+.btn-dark:hover {
+  background: var(--navy-light);
+  transform: translateY(-2px);
+}
+.btn-green {
+  background: var(--green);
+  color: var(--white);
+}
+.btn-green:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  width: 40px; height: 40px;
+  background: var(--gold);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.nav-desktop { display: flex; gap: 32px; align-items: center; }
+.nav-desktop a {
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+.nav-desktop a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy) !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--gold-light); }
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 72px; left: 0; right: 0;
+  background: var(--navy);
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.nav-mobile a {
+  display: block;
+  padding: 14px 0;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-mobile a:last-child { border-bottom: none; }
+.nav-mobile.active { display: block; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2744 50%, var(--navy-light) 100%);
+  position: relative;
+  padding-top: 72px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 168, 83, 0.15);
+  color: var(--gold);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border: 1px solid rgba(212, 168, 83, 0.3);
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Trust bar */
+.trust-bar {
+  background: var(--gold);
+  padding: 20px 0;
+}
+.trust-bar-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.trust-item svg {
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+}
+
+/* Section styling */
+.section {
+  padding: 80px 0;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+.section-subtitle {
+  text-align: center;
+  color: var(--gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+.section-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+.section-dark .section-title { color: var(--white); }
+.section-dark .section-subtitle { color: rgba(255,255,255,0.6); }
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-light);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+.card-icon {
+  width: 56px; height: 56px;
+  background: rgba(212, 168, 83, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+.card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Who We Support */
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.support-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border: 1px solid var(--gray-light);
+}
+.support-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.support-card .icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+.support-card h4 {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* How It Works */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  counter-reset: step;
+}
+.step {
+  text-align: center;
+  position: relative;
+}
+.step-number {
+  width: 64px; height: 64px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 auto 20px;
+}
+.step h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+.step p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+}
+
+/* Why Choose */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.why-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.why-check {
+  width: 28px; height: 28px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.why-item h4 {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--navy);
+}
+.why-item p {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Certificates */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.cert-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+.cert-item:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--gold);
+}
+.cert-item span { font-size: 1.3rem; }
+.cert-item p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.cert-note {
+  text-align: center;
+  margin-top: 32px;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+}
+
+/* Forms */
+.form-section {
+  background: var(--off-white);
+}
+.form-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--gray-light);
+}
+.form-card h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+.form-card > p {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 32px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group.full { grid-column: 1 / -1; }
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--white);
+  transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form-submit {
+  margin-top: 24px;
+  text-align: center;
+}
+.form-submit .btn {
+  min-width: 260px;
+}
+.form-message {
+  display: none;
+  text-align: center;
+  padding: 16px;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.form-message.show { display: block; }
+
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--white);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--gray-light);
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+.faq-question:hover { background: var(--off-white); }
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--gold);
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-question::after {
+  content: '−';
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 24px 20px;
+}
+.faq-answer p {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.contact-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+.contact-card .icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+.contact-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.contact-card a,
+.contact-card p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+}
+.contact-card a:hover { color: var(--gold); }
+
+/* Footer */
+.footer {
+  background: #0a0f1c;
+  padding: 48px 0 24px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.footer-brand .logo {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+.footer-brand p {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+}
+.footer-links h4 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+.footer-links a {
+  display: block;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.85rem;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: #25d366;
+  color: var(--white);
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .menu-toggle { display: block; }
+  .hero-buttons { flex-direction: column; }
+  .btn { width: 100%; }
+  .trust-bar-inner { justify-content: center; }
+  .form-card { padding: 24px; }
+  .section { padding: 60px 0; }
+  .whatsapp-float {
+    width: 52px; height: 52px;
+    font-size: 1.5rem;
+    bottom: 16px; right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .section-title { font-size: 1.6rem; }
+}
+
+/* Utility */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">🍴</div>
+      CHOPI
+    </a>
+    <nav class="nav-desktop">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#for-businesses">For Businesses</a>
+      <a href="#join-team">Join Our Team</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#request-staff" class="nav-cta">Book Staff</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+  </div>
+  <nav class="nav-mobile" id="mobileMenu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="#for-businesses" onclick="toggleMenu()">For Businesses</a>
+    <a href="#join-team" onclick="toggleMenu()">Join Our Team</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="#request-staff" onclick="toggleMenu()" style="color: var(--gold); font-weight: 700;">Book Staff</a>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span>★</span> Trusted Hospitality Staffing Across Southampton & Hampshire
+    </div>
+    <h1>Reliable Hospitality Staff, <span>When You Need Them</span></h1>
+    <p>Chopi supplies experienced chefs and hospitality professionals for care homes, restaurants, hotels, schools, events and catering companies across the South Coast.</p>
+    <div class="hero-buttons">
+      <a href="#request-staff" class="btn btn-primary">Book Staff</a>
+      <a href="#join-team" class="btn btn-secondary">Join Our Team</a>
+      <a href="https://wa.me/447344537883" target="_blank" rel="noopener" class="btn btn-green">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      Fast Cover
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Experienced Staff
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Flexible Bookings
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Southampton & Hampshire
+    </div>
+    <div class="trust-item">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Available 7 Days a Week
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title">Staff We Supply</h2>
+    <p class="section-subtitle">From kitchen assistants to head chefs, we match the right person to your business needs.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">👨‍🍳</div>
+        <h3>Head Chefs</h3>
+        <p>Experienced leaders ready to run your kitchen, manage teams and maintain high standards from day one.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🍳</div>
+        <h3>Sous Chefs</h3>
+        <p>Skilled second-in-command chefs who support service delivery and kitchen operations reliably.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔪</div>
+        <h3>Chefs de Partie</h3>
+        <p>Competent section chefs for hot, cold, pastry and prep stations across all kitchen environments.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>Relief Chefs</h3>
+        <p>Flexible cover for holidays, sickness or busy periods — available at short notice across the South Coast.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏥</div>
+        <h3>Care Home Chefs</h3>
+        <p>Chefs experienced in therapeutic diets, texture-modified meals and care home kitchen compliance.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧽</div>
+        <h3>Kitchen Porters</h3>
+        <p>Hard-working porters to keep your kitchen clean, organised and running smoothly during service.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Kitchen Assistants</h3>
+        <p>Reliable support staff for prep, plating, stock rotation and general kitchen duties.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🍽️</div>
+        <h3>Catering Assistants</h3>
+        <p>Front and back-of-house catering staff for events, schools, hospitals and corporate dining.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎩</div>
+        <h3>Hospitality Staff</h3>
+        <p>Waiters, bar staff, event helpers and front-of-house professionals for hotels, pubs and functions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHO WE SUPPORT ==================== -->
+<section class="section" id="for-businesses" style="background: var(--off-white);">
+  <div class="container">
+    <h2 class="section-title">Who We Support</h2>
+    <p class="section-subtitle">We work with a wide range of businesses across the hospitality and care sectors.</p>
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="icon">🏥</div>
+        <h4>Care Homes</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🏨</div>
+        <h4>Hotels</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🍽️</div>
+        <h4>Restaurants</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🎓</div>
+        <h4>Schools</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🎉</div>
+        <h4>Event Venues</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🚚</div>
+        <h4>Catering Companies</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🍺</div>
+        <h4>Pubs</h4>
+      </div>
+      <div class="support-card">
+        <div class="icon">🥂</div>
+        <h4>Private Functions</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="section section-dark" id="how-it-works">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">Four simple steps to get the staff you need, when you need them.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Tell Us What You Need</h3>
+        <p>Share the role, date, time and location. Call, WhatsApp or fill in our quick request form.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>We Confirm Availability</h3>
+        <p>We check our pool of professionals and confirm availability along with a clear, upfront price.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>A Team Member Attends</h3>
+        <p>A suitable, experienced worker arrives on time, ready to work to your standards.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>You Receive a Clear Invoice</h3>
+        <p>After the shift, you receive a professional invoice with no hidden fees or surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY CHOOSE CHOPI ==================== -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">Why Choose Chopi</h2>
+    <p class="section-subtitle">We are building a reputation for reliability, quality and honest communication across the South Coast.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Experienced Hospitality Workers</h4>
+          <p>Our network includes chefs and staff with real kitchen and care home experience.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Flexible Short-Notice Cover</h4>
+          <p>Last-minute sickness or a sudden busy period? We work hard to find cover quickly.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Clear, Honest Pricing</h4>
+          <p>No hidden charges. You know the rate before the shift begins.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Reliable Communication</h4>
+          <p>Phone, WhatsApp or email — we respond promptly and keep you updated.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>DBS & Certificates Checked</h4>
+          <p>Relevant documents and training can be verified before placement where required.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Local Knowledge</h4>
+          <p>Based in Southampton, we understand the local hospitality and care landscape.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Professional Invoicing</h4>
+          <p>Clean, simple invoices sent after the shift for straightforward accounting.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div>
+          <h4>Growing Agency Model</h4>
+          <p>Chopi is built to scale — more professionals joining means more cover options for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CERTIFICATES & STANDARDS ==================== -->
+<section class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">Certificates & Standards</h2>
+    <p class="section-subtitle">Available staff may hold relevant training and documentation suited to your environment.</p>
+    <div class="cert-grid">
+      <div class="cert-item"><span>🛡️</span><p>Enhanced DBS</p></div>
+      <div class="cert-item"><span>🍞</span><p>Food Safety Level 2 & 3</p></div>
+      <div class="cert-item"><span>🥜</span><p>Allergen Awareness</p></div>
+      <div class="cert-item"><span>⚗️</span><p>COSHH</p></div>
+      <div class="cert-item"><span>🏥</span><p>Health & Safety</p></div>
+      <div class="cert-item"><span>🥄</span><p>Dysphagia Care</p></div>
+      <div class="cert-item"><span>📋</span><p>IDDSI Knowledge</p></div>
+      <div class="cert-item"><span>🍎</span><p>Medical Diets</p></div>
+      <div class="cert-item"><span>🦷</span><p>Oral Care</p></div>
+      <div class="cert-item"><span>📄</span><p>Temporary Worker Training</p></div>
+    </div>
+    <p class="cert-note">Relevant documents and training can be verified before placement.</p>
+  </div>
+</section>
+
+<!-- ==================== REQUEST STAFF FORM ==================== -->
+<section class="section form-section" id="request-staff">
+  <div class="container">
+    <div class="form-card">
+      <h2>Request Staff</h2>
+      <p>Fill in the details below and we will get back to you quickly with availability and pricing.</p>
+      <!-- 
+        ============================================
+        FORMSPREE SETUP INSTRUCTION:
+        1. Go to https://formspree.io and create a new form.
+        2. Copy your form endpoint URL (e.g. https://formspree.io/f/xnqkvegy).
+        3. Replace the action URL below with your real Formspree endpoint.
+        ============================================
+      -->
+      <form action="https://formspree.io/f/PLACEHOLDER" method="POST" onsubmit="return handleFormSubmit(event, 'staff-msg')">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="biz-name">Business Name *</label>
+            <input type="text" id="biz-name" name="business_name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-name">Contact Name *</label>
+            <input type="text" id="contact-name" name="contact_name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="venue-type">Venue Type</label>
+            <select id="venue-type" name="venue_type">
+              <option value="">Select venue type</option>
+              <option>Care Home</option>
+              <option>Nursing Home</option>
+              <option>Restaurant</option>
+              <option>Hotel</option>
+              <option>School</option>
+              <option>Event Venue</option>
+              <option>Catering Company</option>
+              <option>Pub</option>
+              <option>Private Function</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="postcode">Postcode *</label>
+            <input type="text" id="postcode" name="postcode" required>
+          </div>
+          <div class="form-group">
+            <label for="role">Staff Role Required *</label>
+            <select id="role" name="role_required" required>
+              <option value="">Select role</option>
+              <option>Head Chef</option>
+              <option>Sous Chef</option>
+              <option>Chef de Partie</option>
+              <option>Relief Chef</option>
+              <option>Care Home Chef</option>
+              <option>Kitchen Assistant</option>
+              <option>Kitchen Porter</option>
+              <option>Catering Assistant</option>
+              <option>Hospitality Staff</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="num-staff">Number of Staff</label>
+            <input type="number" id="num-staff" name="num_staff" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label for="date">Date Required *</label>
+            <input type="date" id="date" name="date_required" required>
+          </div>
+          <div class="form-group">
+            <label for="start-time">Start Time *</label>
+            <input type="time" id="start-time" name="start_time" required>
+          </div>
+          <div class="form-group">
+            <label for="finish-time">Finish Time *</label>
+            <input type="time" id="finish-time" name="finish_time" required>
+          </div>
+          <div class="form-group">
+            <label for="budget">Pay Rate or Budget (optional)</label>
+            <input type="text" id="budget" name="budget" placeholder="e.g. £18/hour or £150/day">
+          </div>
+          <div class="form-group full">
+            <label for="extra">Additional Information</label>
+            <textarea id="extra" name="additional_info" placeholder="Tell us anything else we should know — uniform requirements, special dietary needs, kitchen size, etc."></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Submit Staffing Request</button>
+        </div>
+        <div class="form-message" id="staff-msg">Thank you. We will contact you shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== JOIN OUR TEAM FORM ==================== -->
+<section class="section" id="join-team">
+  <div class="container">
+    <div class="form-card">
+      <h2>Join Our Team</h2>
+      <p>Interested in working with Chopi? Tell us about your experience and availability.</p>
+      <!-- 
+        ============================================
+        FORMSPREE SETUP INSTRUCTION:
+        1. Go to https://formspree.io and create a second form for job applications.
+        2. Copy your form endpoint URL.
+        3. Replace the action URL below with your real Formspree endpoint.
+        ============================================
+      -->
+      <form action="https://formspree.io/f/PLACEHOLDER" method="POST" onsubmit="return handleFormSubmit(event, 'team-msg')">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" name="full_name" required>
+          </div>
+          <div class="form-group">
+            <label for="team-phone">Phone Number *</label>
+            <input type="tel" id="team-phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="team-email">Email Address *</label>
+            <input type="email" id="team-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="team-postcode">Postcode *</label>
+            <input type="text" id="team-postcode" name="postcode" required>
+          </div>
+          <div class="form-group">
+            <label for="main-role">Main Role *</label>
+            <select id="main-role" name="main_role" required>
+              <option value="">Select your main role</option>
+              <option>Head Chef</option>
+              <option>Sous Chef</option>
+              <option>Chef de Partie</option>
+              <option>Relief Chef</option>
+              <option>Care Home Chef</option>
+              <option>Kitchen Assistant</option>
+              <option>Kitchen Porter</option>
+              <option>Catering Assistant</option>
+              <option>Hospitality Staff</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="experience">Years of Experience *</label>
+            <select id="experience" name="years_experience" required>
+              <option value="">Select</option>
+              <option>Less than 1 year</option>
+              <option>1–2 years</option>
+              <option>3–5 years</option>
+              <option>5–10 years</option>
+              <option>10+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dbs">DBS Status</label>
+            <select id="dbs" name="dbs_status">
+              <option value="">Select</option>
+              <option>Enhanced DBS (valid)</option>
+              <option>Standard DBS (valid)</option>
+              <option>Applied / Pending</option>
+              <option>No DBS</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="food-safety">Food Safety Level</label>
+            <select id="food-safety" name="food_safety">
+              <option value="">Select</option>
+              <option>Level 1</option>
+              <option>Level 2</option>
+              <option>Level 3</option>
+              <option>Level 4</option>
+              <option>None</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="availability">Availability *</label>
+            <input type="text" id="availability" name="availability" placeholder="e.g. Mon–Fri, weekends only, evenings" required>
+          </div>
+          <div class="form-group">
+            <label for="transport">Own Transport?</label>
+            <select id="transport" name="own_transport">
+              <option value="">Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="team-extra">Additional Information</label>
+            <textarea id="team-extra" name="additional_info" placeholder="Tell us about your experience, certifications, preferred locations or anything else relevant."></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-dark">Apply to Join</button>
+        </div>
+        <div class="form-message" id="team-msg">Thank you. We will contact you shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section" style="background: var(--off-white);" id="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Quick answers to common questions from clients and workers.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How quickly can you provide staff?</button>
+        <div class="faq-answer"><p>We aim to confirm availability within a few hours. For regular bookings, 24–48 hours notice is ideal. For emergency cover, contact us by phone or WhatsApp and we will do our best to help at short notice.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What areas do you cover?</button>
+        <div class="faq-answer"><p>We are currently focused on Southampton, Hampshire and the South Coast. As Chopi grows, we plan to expand coverage across more of the UK.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I book staff for just one shift?</button>
+        <div class="faq-answer"><p>Yes. We offer flexible bookings — single shifts, short-term cover and ongoing placements are all possible.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you provide care home chefs?</button>
+        <div class="faq-answer"><p>Yes. We supply chefs experienced in care home catering, including knowledge of therapeutic diets, texture modification and care home compliance.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Are documents and certificates checked?</button>
+        <div class="faq-answer"><p>Relevant documents and training can be verified before placement where required. We encourage transparency about certifications for every booking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How do I join the Chopi team?</button>
+        <div class="faq-answer"><p>Fill in the "Join Our Team" form above with your details, experience and availability. We review every application and will contact you to discuss next steps.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How does invoicing work?</button>
+        <div class="faq-answer"><p>After the shift is completed, we send a clear, professional invoice with no hidden fees. Payment terms are agreed upfront so there are no surprises.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I request the same worker again?</button>
+        <div class="faq-answer"><p>Yes. If you are happy with a particular worker, let us know and we will prioritise sending them again for future bookings where their availability allows.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section section-dark" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Reach out by phone, WhatsApp or email — we respond quickly.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <h4>Email</h4>
+        <a href="mailto:info@chopi.co.uk">info@chopi.co.uk</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h4>Phone</h4>
+        <a href="tel:07344537883">07344 537883</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">💬</div>
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/447344537883" target="_blank" rel="noopener">+44 7344 537883</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h4>Location</h4>
+        <p>Southampton, Hampshire<br>South Coast, UK</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🍴</div>
+          CHOPI
+        </div>
+        <p>Hospitality staffing for care homes, restaurants, hotels, schools and events across Southampton & Hampshire.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#request-staff">Book Staff</a>
+        <a href="#join-team">Join Our Team</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chopi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== FLOATING WHATSAPP ==================== -->
+<a href="https://wa.me/447344537883" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
+
+// FAQ accordion
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isActive = item.classList.contains('active');
+  // Close all
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+  // Open clicked if it was closed
+  if (!isActive) item.classList.add('active');
+}
+
+// Form submit handler (shows thank-you message)
+function handleFormSubmit(event, msgId) {
+  // Show thank-you message immediately for demo/GitHub Pages
+  // When Formspree is connected, this will run alongside the real submission
+  const msg = document.getElementById(msgId);
+  if (msg) {
+    msg.classList.add('show');
+    setTimeout(() => msg.classList.remove('show'), 6000);
+  }
+  // Allow normal form submission to proceed (for Formspree)
+  return true;
+}
+
+// Close mobile menu on resize to desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    document.getElementById('mobileMenu').classList.remove('active');
+  }
+});
+
+// Header shadow on scroll
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 10) {
+    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+});
+</script>
+
+</body>
+</html>'''
+
+with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
+    f.write(html_code)
+
+
